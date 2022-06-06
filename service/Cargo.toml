@@ -1,6 +1,7 @@
 
 [dependencies]
-  fastly = "^0.8.2"
+  fastly = "0.8.2"
+  regex = "1.5.4"
 
 [package]
   edition = "2021"
