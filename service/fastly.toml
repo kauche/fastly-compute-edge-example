@@ -7,3 +7,6 @@ language = "rust"
 manifest_version = 2
 name = "fastly-compute-edge-example"
 service_id = ""
+
+[local_server."backends"."example.kauche.com"]
+url = "http://origin:5000"
