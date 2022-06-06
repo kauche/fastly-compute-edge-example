@@ -1,0 +1,14 @@
+
+[dependencies]
+  fastly = "^0.8.2"
+
+[package]
+  edition = "2021"
+  name = "fastly-compute-edge-example"
+  publish = false
+  version = "0.1.0"
+
+[profile]
+
+  [profile.release]
+    debug = 1
