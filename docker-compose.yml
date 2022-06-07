@@ -1,0 +1,18 @@
+---
+version: "3.8"
+
+services:
+
+  fastly:
+    image: rust:1.61.0-bullseye
+    ports:
+      - ${PORT:-3000}:3000
+    working_dir: /src/fastly-compute-edge-example/service
+    volumes:
+      - .:/src/fastly-compute-edge-example
+      - ./bin/viceroy:/root/.config/fastly/viceroy
+      - ./cache/registry:/usr/local/cargo/registry
+    command: ../bin/fastly compute serve --skip-build --addr 0.0.0.0:3000
+
+  backend:
+    image: ghcr.io/110y/echoserver/echoserver:0.0.1
