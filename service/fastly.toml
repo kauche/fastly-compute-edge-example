@@ -1,12 +1,12 @@
 # This file describes a Fastly Compute@Edge package. To learn more visit:
 # https://developer.fastly.com/reference/fastly-toml/
 
-authors = [""]
-description = "An empty starter kit project template."
+authors = ["110y"]
+description = "An example project for Fastly Compute@Edge"
 language = "rust"
 manifest_version = 2
 name = "fastly-compute-edge-example"
 service_id = ""
 
-[local_server."backends"."example.kauche.com"]
-url = "http://origin:5000"
+[local_server.backends."example.kauche.com"]
+url = "http://backend:5000"
